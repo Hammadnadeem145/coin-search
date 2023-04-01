@@ -1,7 +1,10 @@
 import React from "react";
 import CoinItem from "./CoinItem";
+import Coin from '../routes/Coin'
+import Link from "next/link";
+ 
 
-const Coins = () => {
+const Coins = (props) => {
   return (
     <div className="max-w-[1149px] m-auto">
       <div>
@@ -16,7 +19,9 @@ const Coins = () => {
 
         {props.coins.map(coins => {
             return (
+              <Link path={`/coin/${coins.id}`} element={<Coin />} key={coins.id}>
                 <CoinItem coins={coins} />
+                </Link>
             )
         })}
       </div>
