@@ -26,9 +26,9 @@ export default function Home() {
     <>
       <Navbar />
       <Link>
-        <Link path="/" element={<Coins coins={coins} />} />
-        <Link path="/coin" element={<Coin />}>
-          <Link path=":coinId" element={<Coin />} />
+        <Link href="/" element={<Coins coins={coins} />} />
+        <Link href="/coin" element={<Coin />}>
+          <Link href=":coinId" element={<Coin />} />
         </Link>
       </Link>
     </>

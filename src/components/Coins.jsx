@@ -19,7 +19,7 @@ const Coins = (props) => {
 
         {props.coins.map(coins => {
             return (
-              <Link path={`/coin/${coins.id}`} element={<Coin />} key={coins.id}>
+              <Link href={`/coin/${coins.id}`} element={<Coin />} key={coins.id}>
                 <CoinItem coins={coins} />
                 </Link>
             )
