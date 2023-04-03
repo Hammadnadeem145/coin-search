@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Link from "next/link";
+import { Routes, Route } from 'react-router-dom'
 import axios from 'axios'
 import React, { useEffect, useState } from "react";
 import Coins from "../components/Coins";
@@ -25,12 +25,12 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Link>
-        <Link href="/" element={<Coins coins={coins} />} />
-        <Link href="/coin" element={<Coin />}>
-          <Link href=":coinId" element={<Coin />} />
-        </Link>
-      </Link>
+      <Routes>
+        <Route path='/' element={<Coins coins={coins} />} />
+        <Route path='/coin' element={<Coin />}>
+          <Route path=':coinId' element={<Coin />} />
+        </Route>
+      </Routes>
     </>
   );
 }

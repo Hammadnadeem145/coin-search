@@ -1,9 +1,9 @@
  import '@/styles/globals.css'
 import React from 'react'
-import Link from "next/link";
+import {BrowserRouter} from "react-router-dom";
 
 
 
 export default function App({ Component, pageProps }) {
-  return  <Component {...pageProps} /> 
+  return <BrowserRouter> <Component {...pageProps} /> </BrowserRouter> 
 }
